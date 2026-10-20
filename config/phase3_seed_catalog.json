@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "target": {
+    "name": "Booz Allen McLean office",
+    "latitude_deg": 38.922403,
+    "longitude_deg": -77.232125,
+    "label_radius_m": 2000,
+    "threshold_dbz": 35
+  },
+  "horizons_minutes": [30, 60],
+  "events": [
+    {
+      "event_id": "klwx-2024-06-05-poolesville",
+      "radars": ["KLWX", "KDOX", "KAKQ"],
+      "start_utc": "2024-06-05T22:30:00Z",
+      "end_utc": "2024-06-05T23:55:00Z",
+      "purpose": "single-cluster control case"
+    },
+    {
+      "event_id": "klwx-2024-05-27-multicluster",
+      "radars": ["KLWX", "KDOX", "KAKQ"],
+      "start_utc": "2024-05-27T22:15:00Z",
+      "end_utc": "2024-05-27T23:55:00Z",
+      "purpose": "multi-cluster smoke case"
+    }
+  ]
+}

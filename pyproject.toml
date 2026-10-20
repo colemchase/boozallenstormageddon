@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "storm-tracker"
+version = "0.1.0"
+description = "Baseline storm-cell motion tracking for Stormageddon"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.optional-dependencies]
+nexrad = ["arm-pyart>=2.0", "boto3>=1.34"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+storm-track = "storm_motion.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
